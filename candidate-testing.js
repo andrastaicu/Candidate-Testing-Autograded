@@ -44,12 +44,12 @@ function gradeQuiz(candidateAnswers) {
     let actualAnswer = correctAnswers[i].toLowerCase();
     if (candidateResponse == actualAnswer){
       score++; 
-      console.log('Question: ${questions[i]} Answer: ${candidateResponse} - correct!');
+      console.log(`Question: ${questions[i]} Answer: ${candidateResponse} - correct!`);
     }else{
-      console.log('Question: ${questions[i]} Answer: ${candidateResponse} - Please try again');
+      console.log(`Question: ${questions[i]} Answer: ${candidateResponse} - Please try again`);
     }
     }
-  }
+  
   
   
 
@@ -57,12 +57,12 @@ function gradeQuiz(candidateAnswers) {
 
   let grade = (score/ questions.length) * 100;
   if (grade >= 80){
-    console.log("Congratulations, you've passed with a grade of ${grade}/100");
+    console.log(`Congratulations, you've passed with a grade of ${grade}/100`);
   }else{
-    console.log("You failed with a score of ${grade}/100. Please try again");
+    console.log(`You failed with a score of ${grade}/100. Please try again`);
   }
  return grade;
-
+}
 
 function runProgram() {
   askForName();
